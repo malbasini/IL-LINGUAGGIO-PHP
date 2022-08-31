@@ -1,0 +1,2 @@
+<?php
+//OPERATORI LOGICI
