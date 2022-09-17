@@ -1,8 +1,5 @@
 <?php
-/*--Il primo metodo magico che andiamo ad analizzare è  __construct (costruttore)
-Grazie al costruttore possiamo inizializzare un oggetto con certi valori. Tale
-metodo viene automaticamente invocato da PHP in fase di creazione dell'oggetto.*/
-
+//CORSO.PHP
 class Corso
 {  
      

@@ -1,5 +1,5 @@
 <?php 
-
+//FRONTEND.PHP
 class Frontend extends Corso{
 
     public $frontendConfig1;

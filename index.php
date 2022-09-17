@@ -1,4 +1,5 @@
 <?php
+//INDEX.PHP
 require __DIR__ . '/OOP/lib/corso.php';
 require __DIR__ . '/OOP/lib/frontend.php';
 require __DIR__ . '/OOP/lib/backend.php';
