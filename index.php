@@ -1,18 +1,26 @@
 <?php
 //INDEX.PHP
-require __DIR__ . '/OOP/lib/corso.php';
-require __DIR__ . '/OOP/lib/frontend.php';
-require __DIR__ . '/OOP/lib/backend.php';
+require __DIR__ . '/OOP/lib/Corso.php';
+require __DIR__ . '/OOP/lib/Frontend.php';
+require __DIR__ . '/OOP/lib/Backend.php';
+require __DIR__ . '/OOP/lib/Statistiche.php';
 
-$css = new Frontend("css",19,"Configurazione corso css");
-$php = new Backend("PHP",23, "Configurazione corso PHP");
-$css->frontendConfig1 = "Modificata";
-echo $css->riepilogo()."<br><br>";
-echo $php->riepilogo()."<br><br>"; 
+$corsoPHP = new Corso("Corso PHP");
+$corsoJS = new Frontend("Corso JavaScript",19);//Frontend è una sottoclasse della classe Corso
+/*--Nel type hinting nel costruttore della classe Statistiche abbiamo indicato un oggetto di
+tipo Corso.*/
 
-//PROPRIETà READ-ONLY
-$corsoPHP = new Corso("Corso PHP",prezzo:99);
-//$corsoPHP->prezzo = 99;ERRORE PROPRIETA' READ-ONLY
-var_dump($corsoPHP);
+
+$statistiche = new Statistiche($corsoPHP);
+$statistiche = new Statistiche($corsoJS);
+
+echo Corso::$piattaforma;  //Proprietà statica
+
+
+Frontend::info(); 
+echo Corso::info();
+
+echo $corsoPHP->curriculum([]);
+echo $corsoPHP->requisiti();
 ?>
 

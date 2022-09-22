@@ -12,11 +12,12 @@ class Backend extends Corso{
         echo "Metodo ". __METHOD__ ." invocato <br>";
     }
 
-    public function riepilogo(){
+    public function riepilogo():string{
         
         $riepilogo = parent::riepilogo();
         return $riepilogo ." Configurazione: ". $this->backendConfig1;
     }
+    
 }
 
 
