@@ -21,6 +21,9 @@ class A{
     public function a(){
         echo "Metodo ". __METHOD__ ." eseguito <br>";
     }
+    public function fn3(){
+        echo "Method ".__METHOD__;
+    }
 
 }
 $a = new A();

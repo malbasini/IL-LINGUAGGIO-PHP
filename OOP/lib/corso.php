@@ -2,13 +2,13 @@
 //CORSO.PHP
 include 'UdemyCourse.php';
 include 'GianlucaCourse.php';
-class Corso implements UdemyCourse, GianlucaCourse
+class Corso implements UdemyCourse,GianlucaCourse
 {  
      public function curriculum(array|null $lezioni):string{
-          return "Implementato metodo interfaccia ". __METHOD__ ."<br>";
+          return "Implementato metodo ".__METHOD__ ." dell'interfaccia UdemyCourse";
      }
      public function requisiti():string{
-          return "Implementata metodo interfaccia ". __METHOD__ ."<br>";
+          return "Implementato metodo ".__METHOD__ ." dell'interfaccia GianlucaCourse";
      }
      public static string $piattaforma = "Piattaforma X";
 
@@ -38,16 +38,13 @@ class Corso implements UdemyCourse, GianlucaCourse
               
            }
 
-          protected function riepilogo():string//TYPE HINTING
-          {
-               return "Titolo: " . $this -> titolo . "<br>"
-               . "Autore: ". $this -> autore ."<br>"
-               . "Categoria: " .$this -> categoria ."<br>"
-               . "Prezzo: ".$this -> prezzo ."<br>"; 
-          }
-          
-          
-          
+     protected function riepilogo():string//TYPE HINTING
+     {
+          return "Titolo: " . $this -> titolo . "<br>"
+          . "Autore: ". $this -> autore ."<br>"
+          . "Categoria: " .$this -> categoria ."<br>"
+          . "Prezzo: ".$this -> prezzo ."<br>"; 
+     }       
           
 }
 
