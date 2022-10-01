@@ -4,7 +4,8 @@
 ma compatte ed inserite in un contesto ben più ampio. Se una classe
 non ha tutte le funzionalità al proprio interno, da qualche parte deve
 averle per portare a termine il proprio compito. Uno dei metodi che abbiamo
-studiato è l'ereditarietà.*/
+studiato è l'ereditarietà. Un altro metodo è passare nel costruttore
+di una classe un servizio e usare i suoi metodi all'interno della classe.*/
 class EmailService{
 
     public function sendEmail(){
@@ -17,7 +18,7 @@ class Course{
     public function __construct(public EmailService $emailService){
 
     }
-    /*--Se entriamo nel metodo _call significa che o il metodo esiste
+    /*--Se entriamo nel metodo _call significa che ho il metodo esiste
     all'interno della classe Course però non è accessibile, oppure
     non esiste nella classe Course ma esiste nella classe EmailService.
     Il metodo magico __call() può essere utile per delegare l'invocazione di un metodo
