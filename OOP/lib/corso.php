@@ -32,7 +32,7 @@ class Corso implements UdemyCourse,GianlucaCourse
                public string $titolo,
                public string $autore = "Gianluca",
                public string $categoria = "Senza categoria",
-               public readonly int|float $prezzo = 0
+               public  int|float $prezzo = 0
            )
            {
               
