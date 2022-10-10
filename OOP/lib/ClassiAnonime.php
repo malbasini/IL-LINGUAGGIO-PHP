@@ -10,10 +10,10 @@ $obj = new class("Classe anonima \n") extends A{
     }
 };
 //SIMULAZIONE CLASSI ANNIDATE
-class Course{
+class Course1{
     public int $p1 = 20;
     public function riepilogo(){
-        return new class($this) extends Course{
+        return new class($this) extends Course1{
         public function __construct(){}
         public function getP1(){
             echo $this -> p1;
@@ -23,7 +23,7 @@ class Course{
   }
 }
 
-$corsoPHP = new Course();
+$corsoPHP = new Course1();
 $obj = $corsoPHP->riepilogo();
 $obj->getP1();
 ?>

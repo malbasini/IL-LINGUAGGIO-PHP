@@ -14,10 +14,10 @@ var_dump($a instanceof B);//false
 interface Udemy{
     public function curriculum();
 }
-class Course implements Udemy{
+class Course2 implements Udemy{
     public function curriculum(){}
 }
-$maestroPHP = new Course();
+$maestroPHP = new Course2();
 var_dump($maestroPHP instanceof Udemy);
 echo get_class($maestroPHP)."\n\r";
 //possiamo usare anche questa sintassi
