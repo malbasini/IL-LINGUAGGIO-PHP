@@ -1,0 +1,6 @@
+<?php
+//FILE DI ERRORE PERSONALIZZATO CON LA DIRETTIVA ErrorLog.
+
+echo $c;
+
+?>
